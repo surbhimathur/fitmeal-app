@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Crimson Text', serif;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section{
+  background:url("")
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.user_form{
+  /* box-shadow: 3px 1px 12px 8px rgba(117,112,112,0.75); */
+  box-shadow: -1px 1px 13px 5px rgba(117,112,112,0.75);
+  width:80%;
+  height:90vh;
+  margin:40px auto;
+  padding:10px 15px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  border-radius:20px;
+  background-color:rgba(219, 215, 215, 0.4);
+  
+}
+.activity{
+  width:100%;
+}
+.gender{
+  display:flex;
+  align-items:center;
+  border:1px solid black;
+  width:100%;
+}
+.radiobuttons{
+  border:1px solid black;
+  margin-left:30px;
+}
+.diet_buttons{
+  border:1px solid black;
+  margin-left:15px;
+}
+.home{
+  border:1px solid black;
+  width:100%;
+  margin:0 auto;
+}
+.hero_box{
+  width:100%;
+  height:auto;
+  /* background: #B24592; 
+background: linear-gradient(to right, #F15F79, #B24592);  */
+/* background-color:#8e9b6f; */
+background-color:#769b6f;
+display:flex;
+justify-content:space-between;
+}
+.title{
+  border:1px solid black;
+  width:40%;
+  padding-left:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.title h1{
+  text-transform:uppercase;
+  color:rgb(239, 239, 112);
+  font-size:25px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title p{
+  color:white;
+  font-size: 16px;
+  padding:5px;
+}
+.hero_image{
+width:60%;
+border:1px solid white;
+/* background:url("../src/hero.png");
+background-size:contain;
+background-repeat:no-repeat; */
+}
+.hero_image img{
+  width:100%;
+  height:auto;
+  border:1px solid black;
+  
+}
+#link{
+  text-decoration:none;
+  background-color:green;
+  border-radius:10px;
+  margin-top:10px;
 }
