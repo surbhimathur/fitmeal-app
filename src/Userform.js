@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 import Button from "@mui/material/Button";
@@ -5,6 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormLabel from "@mui/material/FormLabel";
 import InputLabel from "@mui/material/InputLabel";
+import Mealplan from "./Mealplan";
 import MenuItem from "@mui/material/MenuItem";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -20,7 +22,9 @@ function Userform() {
   const [gender, setGender] = useState("");
   const [diet, setDiet] = useState("");
   const [activity, setActivity] = useState("");
-  
+ 
+  const navigate = useNavigate();
+
   let totalCalories;
   let burncalories;
   let bmr;
@@ -40,18 +44,21 @@ function Userform() {
       console.log("burncalories",burncalories);
     }
      await getDietChart(burncalories,diet);
-     setName("");
-     setAge("");
-     setWeight("");
-     setHeight("");
-     setGender(""); 
-     setDiet("");
-     setActivity("");
+    
+    //  setName("");
+    //  setAge("");
+    //  setWeight("");
+    //  setHeight("");
+    //  setGender(""); 
+    //  setDiet("");
+    //  setActivity("");
   };
 
   const getDietChart=async(calories,preference)=>{
-    const {data}= await axios.get(`/dietchart?calorie=${calories}&preference=${preference}`);
-    console.log(data);
+    const {data}= await axios.get(`/dietchart?calorie=${calories}&preference=${preference}`)
+   
+      navigate("/mealplan", {state:{data}})
+      
   }
  
   
@@ -150,7 +157,7 @@ function Userform() {
             />
           </RadioGroup>
         </div>
-
+   
         <Button
           variant="contained"
           style={{
@@ -165,6 +172,7 @@ function Userform() {
         >
           Generate Diet Chart
         </Button>
+       
       </div>
     </section>
   );
