@@ -1,16 +1,22 @@
-import { Link } from '@mui/material';
+import Button from "@mui/material/Button";
+import { HashLink } from "react-router-hash-link";
 import React from "react";
 import Userform from "./Userform";
+import fitlogo from "../src/fitlogo.png";
 import hero from "../src/hero.png";
 
 function Homepage() {
   return (
     <div className="home">
       <div className="hero_box">
-      <div className="title">
-        <h1 >Food for a Healthy Life</h1>
-        <Link to="/userform" id="link"><p>Get a personalized diet chart</p></Link>
-</div>
+        <div className="title">
+        <img src={fitlogo} className="logo" />
+          <h1>Train Your <span id="crave">Body To Crave</span> Healthy Food</h1>
+          {/* here Hashlink is used to scroll on same page by giving id of userform.js file  */}
+          <HashLink to="#detailsform" id="link" smooth>       
+            <Button variant="contained" style={{textTransform:"capitalize",margin:"0px 0px 30px 10px",backgroundColor:"red",fontFamily:'Roboto',fontWeight:"bold"}} size="small">Ready to be healthy</Button>
+          </HashLink>
+        </div>
         <div className="hero_image">
           <img src={hero} alt="hero_image" />
         </div>

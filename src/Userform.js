@@ -30,6 +30,8 @@ function Userform() {
   let bmr;
   const generatediet = async () => {
     console.log(name, age, height, weight, gender, diet, activity);
+    if(name && age && height && weight && gender && diet && activity)
+    {
     if (gender === "male") {
       bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
       totalCalories= bmr * activity;
@@ -44,7 +46,10 @@ function Userform() {
       console.log("burncalories",burncalories);
     }
      await getDietChart(burncalories,diet);
-    
+  }
+  else{
+    alert("Please fill all the fields");
+  }
     //  setName("");
     //  setAge("");
     //  setWeight("");
@@ -57,20 +62,21 @@ function Userform() {
   const getDietChart=async(calories,preference)=>{
     const {data}= await axios.get(`/dietchart?calorie=${calories}&preference=${preference}`)
    
-      navigate("/mealplan", {state:{data}})
+      navigate("/mealplan", {state:{data,name}})
       
   }
  
   
   return (
-    <section>
-      <div className="user_form">
+    <section className="user_section">
+      <div className="user_form" id="detailsform">
         <TextField
           label="Name"
           variant="standard"
           fullWidth
           value={name}
           onChange={(e) => setName(e.target.value)}
+          
         />
         <TextField
           label="Age"
@@ -97,13 +103,13 @@ function Userform() {
           onChange={(e) => setHeight(e.target.value)}
         />
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Activity</InputLabel>
+        
+          <InputLabel>Activity</InputLabel> 
           <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
             value={activity}
             label="Activity"
             onChange={(e) => setActivity(e.target.value)}
+           
           >
             <MenuItem value={1.2}>
               Sedentary: Little or no exercise
@@ -161,12 +167,11 @@ function Userform() {
         <Button
           variant="contained"
           style={{
-            backgroundColor: "#769b6f",
-            color: "black",
-            fontFamily: "Crimson Text",
-            fontWeight: "600",
+           letterSpacing:"0.5px",
+            fontFamily:'Roboto',
             fontSize: "16px",
-            marginTop: "20px",
+            marginTop: "15px",
+          
           }}
           onClick={generatediet}
         >
