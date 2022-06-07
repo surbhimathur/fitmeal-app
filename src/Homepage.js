@@ -14,7 +14,7 @@ function Homepage() {
           <h1>Train Your <span id="crave">Body To Crave</span> Healthy Food</h1>
           {/* here Hashlink is used to scroll on same page by giving id of userform.js file  */}
           <HashLink to="#detailsform" id="link" smooth>       
-            <Button variant="contained" id="healthy" style={{}} size="small">Ready to be healthy</Button>
+            <Button variant="contained" id="healthy" size="small">Ready to be healthy</Button>
           </HashLink>
         </div>
         <div className="hero_image">

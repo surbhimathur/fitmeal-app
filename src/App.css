@@ -58,7 +58,7 @@ display:flex;
 justify-content:space-between;
 }
 .title{
-  
+  border: 1px solid black;
   width:45%;
 }
 .logo{
@@ -80,7 +80,7 @@ justify-content:space-between;
   font-size:25px;
   font-weight:700;
   margin:25px auto 20px auto;
-  width:92%;
+  width:85%;
   font-family: 'Lobster', 'cursive';
 }
 .title p{
@@ -90,7 +90,7 @@ justify-content:space-between;
 }
 #healthy{
   text-transform:capitalize;
-  margin:0px auto 30px 5%;
+  margin:0px auto 30px 6%;
   background-color:red;
   font-family:'Roboto';
   font-weight:bold;
@@ -199,12 +199,12 @@ width:350px;
 
 @media(min-width:500px){
   .title h1{
-    font-size:35px;
+    font-size:30px;
     
   }
 
   #crave{
-    font-size:35px;
+    font-size:30px;
   }
   .mealplan_card{
     
@@ -332,12 +332,26 @@ width:350px;
   
 }
 
+@media(min-width:1029px){
+
+  .title h1{
+    font-size:62px;
+    width:80%;
+  }
+  #crave{
+    font-size:62px;
+  }
+}
 @media(min-width:1124px){
 
   .title h1{
-   
+    width:85%;
+    font-size:55px;
     margin:140px auto 60px auto;
     
+  }
+  #crave{
+    font-size:55px;
   }
   .user_form{
     width:600px;
@@ -347,13 +361,13 @@ width:350px;
 @media(min-width:1235px){
 
   .title h1{
-    font-size:65px;
+    font-size:60px;
     margin:150px auto 50px auto;
     
   }
   
   #crave{
-    font-size:65px;
+    font-size:60px;
   }
   .user_form{
     width:650px;
@@ -363,12 +377,12 @@ width:350px;
 @media(min-width:1330px){
 
   .title h1{
-    font-size:70px;
+    font-size:65px;
     margin:160px auto 50px auto;
     
   }
   #crave{
-    font-size:70px;
+    font-size:65px;
   }
   
   
