@@ -62,7 +62,7 @@ function Userform() {
   const getDietChart=async(calories,preference)=>{
     const {data}= await axios.get(`/dietchart?calorie=${calories}&preference=${preference}`)
    
-      navigate("/mealplan", {state:{data,name}})
+      navigate("/mealplan", {state:{data,name,calories}})
       
   }
  
@@ -104,7 +104,7 @@ function Userform() {
         />
         <FormControl fullWidth>
         
-          <InputLabel>Activity</InputLabel> 
+          <InputLabel style={{lineHeight:"2.4rem"}}>Activity</InputLabel> 
           <Select
             value={activity}
             label="Activity"

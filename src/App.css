@@ -8,7 +8,7 @@ body{
   
 }
 .user_section{
-  background:url("../src/userimage.jpg");
+  background:linear-gradient(rgba(0, 0, 0, 0.499),rgba(0, 0, 0, 0.499)),url("../src/user.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -16,7 +16,7 @@ body{
   /* box-shadow: 3px 1px 12px 8px rgba(117,112,112,0.75); */
   box-shadow: -1px 1px 13px 5px rgba(117,112,112,0.75);
   width:340px;
-  height:80vh;
+  height:85vh;
   margin:220px auto;
   padding:10px 15px;
   display:flex;
@@ -33,20 +33,19 @@ body{
 }
 .gender{
   display:flex;
-  align-items:center;
-  border:1px solid black;
+  align-items:center; 
   width:100%;
 }
 .radiobuttons{
-  border:1px solid black;
+
   margin-left:30px;
 }
 .diet_buttons{
-  border:1px solid black;
+  
   margin-left:15px;
 }
 .home{
-  border:1px solid black;
+  
   width:100%;
   margin:0 auto;
 }
@@ -59,7 +58,7 @@ display:flex;
 justify-content:space-between;
 }
 .title{
-  border:1px solid black;
+  
   width:45%;
 }
 .logo{
@@ -73,12 +72,15 @@ justify-content:space-between;
 #crave{
   color:white;
   font-family: 'Lobster', 'cursive';
+  font-size:25px;
+  font-weight:500;
 }
 .title h1{
   color:rgb(68, 1, 68);
   font-size:25px;
   font-weight:700;
-  margin:25px 0px 20px 10px;
+  margin:25px auto 20px auto;
+  width:92%;
   font-family: 'Lobster', 'cursive';
 }
 .title p{
@@ -86,17 +88,21 @@ justify-content:space-between;
   font-size: 16px;
   padding:5px;
 }
+#healthy{
+  text-transform:capitalize;
+  margin:0px auto 30px 5%;
+  background-color:red;
+  font-family:'Roboto';
+  font-weight:bold;
+}
 .hero_image{
 width:55%;
-border:1px solid white;
-/* background:url("../src/hero.png");
-background-size:contain;
-background-repeat:no-repeat; */
+
 }
 .hero_image img{
   width:100%;
   height:95%;
-  border:1px solid black;
+  
   margin-top:0px;
 }
 #link{
@@ -108,20 +114,16 @@ background-repeat:no-repeat; */
   background:linear-gradient(rgba(0, 0, 0, 0.785),rgba(0, 0, 0, 0.785)),url("../src/healthy-breakfast.webp");
 }
 .mealplan_card{
-  border:1px solid black;
+ 
   border-radius:10px;
-  width:90%;
+  width:350px;
   margin:20px auto;
-  
-  
-  /* background-repeat:no-repeat; */
-
 }
 .card_heading{
   color:white;
   margin-bottom:20px;
   font-size:30px;
-  background-color:rgb(96, 96, 150);
+  background:linear-gradient(to right, #e96443, #904e95);
   border-radius:10px;
   padding-left:10px;
   text-transform: capitalize;
@@ -132,15 +134,21 @@ background-repeat:no-repeat; */
   text-decoration: underline;
   font-size:25px;
   background-color:rgb(11, 94, 11);
-  padding:5px;
+  padding:10px;
+}
+.meal_detail{
+  background-color:beige;
+  border-radius:15px;
+  margin-bottom:10px;
+  padding:5px 10px;
 }
 .mealtime{
-  color:orange;
+  color:red;
   font-size:20px;
 
 }
 .dietname{
-  color:white;
+  color:black;
   font-size:16px;
   font-family:'Roboto';
   font-weight:400;
@@ -148,24 +156,25 @@ background-repeat:no-repeat; */
   letter-spacing:0.5px;
 }
 .diettime{
-  color:white;
+  color:black;
   margin-bottom:15px;
   font-size:16px;
   font-family:'Roboto';
   font-weight:400;
 
 }
-span{
-  font-family:'Roboto';
+#eat_good{
+  font-family: 'Lobster', 'cursive';
   font-weight:300;
   font-size:25px;
+  color:yellow;
 }
 .imp_notes{
-  background-color:orange;
-padding:5px 5px;
+  background:linear-gradient(to right, #e96443, #904e95);
+padding:5px 10px;
 border-radius:10px;
-margin-bottom:20px;
-
+margin:0px auto 20px auto;
+width:350px;
 }
 .imp_notes p{
   text-align:left;
@@ -174,14 +183,193 @@ margin-bottom:20px;
   font-size:14px;
   letter-spacing:0.5px;
   font-weight:bold;
-  
+  color:beige;
 }
 .imp_notes h2{
   margin:10px 0px; 
-  color:rgb(67, 2, 2);
+  color:white;
+  text-decoration: underline;
 }
 .back{
-  border:1px solid white;
   margin:30px auto 10px auto;
   text-align: center;
+}
+
+
+
+@media(min-width:500px){
+  .title h1{
+    font-size:35px;
+    
+  }
+
+  #crave{
+    font-size:35px;
+  }
+  .mealplan_card{
+    
+    width:450px;
+ 
+  }
+  .imp_notes{
+  width:450px;
+  }
+}
+
+@media(min-width:600px){
+
+  .title h1{
+    font-size:40px;
+    margin:35px auto 25px auto;
+    
+  }
+  #crave{
+    font-size:40px;
+  }
+  .user_form{
+    width:400px;
+  }
+  .mealplan_card{
+    
+    width:550px;
+ 
+  }
+  .imp_notes{
+  width:550px;
+  }
+}
+
+@media(min-width:700px){
+
+  .title h1{
+    font-size:45px;
+    margin:45px auto 30px auto;
+    
+  }
+  #crave{
+    font-size:45px;
+  }
+  .user_form{
+    width:450px;
+  }
+  .mealplan_card{
+    
+    width:650px;
+ 
+  }
+  .imp_notes{
+  width:650px;
+  }
+}
+
+@media(min-width:751px){
+
+  .title h1{
+    font-size:50px;
+    margin:50px auto 35px auto;
+    
+  }
+  #crave{
+    font-size:50px;
+  }
+  .user_form{
+    width:450px;
+  }
+  #healthy{
+   font-size:16px;
+  }
+}
+
+@media(min-width:844px){
+
+  .title h1{
+    font-size:55px;
+    margin:60px auto 40px auto;
+    
+  }
+  #crave{
+    font-size:55px;
+  }
+  .user_form{
+    width:500px;
+  }
+}
+
+@media(min-width:937px){
+
+  .title h1{
+    font-size:60px;
+    margin:60px auto 40px auto;
+    
+  }
+  #crave{
+    font-size:60px;
+  }
+  .user_form{
+    width:550px;
+  }
+  .logo{
+    height:80px;
+    width:80px;
+  }
+}
+
+@media(min-width:1000px){
+
+  .title h1{
+   
+    margin:70px auto 50px auto;
+    
+  }
+  .mealplan_card{
+    
+    width:800px;
+ 
+  }
+  .imp_notes{
+  width:800px;
+  }
+  
+}
+
+@media(min-width:1124px){
+
+  .title h1{
+   
+    margin:140px auto 60px auto;
+    
+  }
+  .user_form{
+    width:600px;
+  }
+  
+}
+@media(min-width:1235px){
+
+  .title h1{
+    font-size:65px;
+    margin:150px auto 50px auto;
+    
+  }
+  
+  #crave{
+    font-size:65px;
+  }
+  .user_form{
+    width:650px;
+  }
+  
+}
+@media(min-width:1330px){
+
+  .title h1{
+    font-size:70px;
+    margin:160px auto 50px auto;
+    
+  }
+  #crave{
+    font-size:70px;
+  }
+  
+  
 }
