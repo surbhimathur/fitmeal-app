@@ -60,7 +60,7 @@ function Userform() {
   };
 
   const getDietChart=async(calories,preference)=>{
-    const {data}= await axios.get(`/dietchart?calorie=${calories}&preference=${preference}`)
+    const {data}= await axios.get(`https://fitmealbackend.herokuapp.com/dietchart?calorie=${calories}&preference=${preference}`)
    
       navigate("/mealplan", {state:{data,name,calories}})
       
