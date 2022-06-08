@@ -58,7 +58,7 @@ display:flex;
 justify-content:space-between;
 }
 .title{
-  border: 1px solid black;
+  
   width:45%;
 }
 .logo{
@@ -135,6 +135,7 @@ width:55%;
   font-size:25px;
   background-color:rgb(11, 94, 11);
   padding:10px;
+  border-radius:15px;
 }
 .meal_detail{
   background-color:beige;
